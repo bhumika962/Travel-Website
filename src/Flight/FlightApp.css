@@ -1,0 +1,368 @@
+/* Variables for colors and fonts */
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(248, 4%, 36%);
+  --cardBG: rgb(214, 214, 223);
+  --primary-color: #f5b700;
+  --secondary-color: #f5f5f5;
+  --font-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+}
+
+.most-visited-destinations {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #f5f5f5;
+}
+.most-visited-destinations h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: rgb(68, 46, 46);
+  margin: 1.5rem;
+  background-color: rgba(245, 184, 0, 0.7098039216);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: function-exists;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.most-visited-destinations .destination-cards {
+  display: grid;
+  justify-content: center;
+  margin: 3rem;
+  gap: 1.5rem;
+  padding: 1 1rem;
+}
+.most-visited-destinations .destination-cards .destination-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--cardBG);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.most-visited-destinations .destination-cards .destination-card .icon {
+  color: var(--textColor);
+  font-size: 18px;
+  margin: 5px;
+}
+.most-visited-destinations .destination-cards .destination-card .name {
+  color: var(--textColor);
+  font-weight: 300;
+  font-size: 14px;
+}
+.most-visited-destinations .destination-cards .destination-card .price {
+  font-size: 1rem;
+  color: var(--blackColor);
+  justify-content: right;
+}
+.most-visited-destinations .destination-cards .destination-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(85, 85, 114, 0.549);
+}
+.most-visited-destinations .destination-cards .destination-card img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+.most-visited-destinations .destination-cards .destination-card h3 {
+  font-size: 1.5rem;
+  color: var(--blackColor);
+  margin: 0.5rem 0;
+}
+.most-visited-destinations .destination-cards .destination-card p {
+  color: var(--textColor);
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+.most-visited-destinations .destination-cards .destination-card .btn {
+  background-color: var(--PrimaryColor);
+  color: var(--whiteColor);
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.most-visited-destinations .destination-cards .destination-card .btn span {
+  display: inline-block;
+}
+.most-visited-destinations .destination-cards .destination-card .btn:hover {
+  background-color: var(--SecondaryColor);
+  transform: scale(1.05);
+}
+
+.flight-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
+}
+.flight-form .form-header {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 1rem;
+}
+.flight-form .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.flight-form .radio-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+.flight-form .radio-group label {
+  font-size: 1rem;
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+}
+.flight-form .radio-group label input[type=radio] {
+  margin-right: 0.5rem;
+  accent-color: var(--primary-color);
+}
+.flight-form .input-group {
+  margin-bottom: 1rem;
+}
+.flight-form .input-group label {
+  font-size: 1.1rem;
+  color: var(--font-color);
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.flight-form .input-group .input-wrapper {
+  position: relative;
+}
+.flight-form .input-group .input-wrapper .icon {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+.flight-form .input-group .input-wrapper input,
+.flight-form .input-group .input-wrapper select {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.flight-form .error-message {
+  color: #ff4d4d;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+.flight-form .submit-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #28a745;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+.flight-form .submit-button .icon {
+  margin: auto;
+  align-items: baseline;
+}
+.flight-form .submit-button:hover {
+  background-color: #1e7e34;
+}
+
+.price-select {
+  height: 2.5rem;
+  padding: 0.5rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 80%;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.modal-content pre {
+  background: #f7f7f7;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: left;
+  color: #333;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.close-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #0056b3;
+}
+
+.seat-selection {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.seat-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.seat-row {
+  display: flex;
+}
+.seat-row .seat {
+  width: 40px;
+  height: 25px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.seat-row .seat:hover {
+  background-color: #b3d4fc;
+}
+.seat-row .seat.selected {
+  background-color: #4CAF50;
+  color: white;
+}
+.seat-row .seat:nth-child(2) {
+  margin-right: 20px;
+  margin-left: 5PX;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+}
+
+.close-button {
+  margin-top: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (min-width: 860px) {
+  .destination-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .destination-card {
+    height: auto;
+  }
+}
+@media screen and (max-width: 859px) {
+  .destination-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .destination-card {
+    height: auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  .destination-cards {
+    grid-template-columns: 1fr;
+  }
+  .destination-card {
+    height: auto;
+  }
+}/*# sourceMappingURL=FlightApp.css.map */

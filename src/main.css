@@ -1,0 +1,565 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: yellow;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  display: flex;
+  list-style: none;
+  color: black;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+nav ul li a {
+  color: black;
+  margin-top: 1rem;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.menus {
+  font-size: 25px;
+  display: none;
+  cursor: pointer;
+  color: black;
+  margin-top: 1rem;
+}
+
+@media (max-width: 750px) {
+  nav ul {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: yellow;
+    transform: translateY(-1000px);
+    transition: all 0.4s;
+  }
+  .menus {
+    display: flex;
+  }
+  nav ul.active {
+    transform: translateY(0px);
+  }
+}
+.info1 {
+  background: url(bg.jpg);
+  background-position: center;
+  width: 80%;
+  background-size: cover;
+  padding: 10rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.info {
+  background-color: #FFD700;
+}
+
+@media screen and (min-width: 300px) {
+  .info1 {
+    background: url(bg.jpg);
+    background-position: center;
+    width: 80%;
+    background-size: cover;
+    padding: 30px;
+    margin-left: 3rem;
+    margin-right: 0rem;
+  }
+  .info {
+    background-color: #FFD700;
+    text-align: left;
+  }
+  .info h1 {
+    font-size: 25px;
+    margin-top: 5rem;
+  }
+  .info p {
+    font-size: 15px;
+    margin-top: 3rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .info1 {
+    background: url(bg.jpg);
+    background-position: center;
+    width: 80%;
+    background-size: cover;
+    padding: 10rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  .info h1 {
+    font-size: 30px;
+    margin-top: 5rem;
+  }
+  .info p {
+    font-size: 18px;
+    margin-top: 3rem;
+  }
+}
+.info1 p {
+  font-size: 16px;
+  text-align: left;
+}
+
+.info2 {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.parent {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.parent .div1 {
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 3rem;
+}
+.parent .div1 img {
+  margin-top: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  border-radius: 10px;
+}
+.parent img:hover {
+  background-color: rgb(216, 216, 27);
+}
+.parent img:active {
+  background-color: white;
+}
+.parent .div1 {
+  text-align: center;
+  justify-content: center;
+}
+.parent .div1 h1 {
+  font-size: 20px;
+  margin-top: 1rem;
+}
+.parent .div1 p {
+  font-size: 15px;
+  margin-top: 1rem;
+}
+.parent .button1 {
+  background-color: yellow;
+  color: black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  margin-top: 1rem;
+}
+.parent .button1:hover {
+  background-color: rgb(152, 152, 53);
+}
+.parent .button1:active {
+  background-color: #3e8e41;
+}
+
+@media screen and (min-width: 300px) {
+  .parent {
+    display: block;
+  }
+  .parent .div1 img {
+    width: 90%;
+  }
+  .parent .div1 h1 {
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+  .parent .div1 p {
+    font-size: 15px;
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .parent {
+    display: flex;
+  }
+  .parent .div1 img {
+    width: 100%;
+  }
+  .parent .div1 h1 {
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+  .parent .div1 p {
+    font-size: 15px;
+    margin-top: 1rem;
+  }
+}
+.info3 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 300px) {
+  .info3 {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .info3 {
+    font-size: 20px;
+  }
+}
+.flightb {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.flightb .flight {
+  transition: background-color 0.5s;
+}
+.flightb .flight:hover {
+  background-color: #D3D3D3;
+  border-radius: 20px;
+}
+.flightb .flight:active {
+  background-color: #FFD700;
+}
+.flightb .flight img {
+  border-radius: 10px;
+  width: 80%;
+  margin: 1rem;
+  cursor: pointer;
+  margin-left: 3rem;
+}
+
+.inffo {
+  align-items: center;
+  justify-content: center;
+}
+
+.inffo h1 {
+  margin-top: 2rem;
+  font-size: 25px;
+  align-items: center;
+  text-align: center;
+}
+
+.inffo p {
+  margin-top: 1rem;
+  font-size: 15px;
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.button2 {
+  background-color: yellow;
+  color: black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  margin-top: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.button2:hover {
+  background-color: rgb(152, 152, 53);
+}
+
+.button2:active {
+  background-color: #3e8e41;
+}
+
+@media screen and (min-width: 300px) {
+  .flightb {
+    display: block;
+    box-sizing: 2rem;
+    margin-top: 3rem;
+    align-items: left;
+    justify-content: left;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .inffo h1 {
+    margin-top: 2rem;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  .inffo p {
+    margin-top: 1rem;
+    font-size: 13px;
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .button2 {
+    margin-left: 9rem;
+  }
+}
+@media screen and (min-width: 400px) {
+  .button2 {
+    margin-left: 10rem;
+  }
+}
+@media screen and (min-width: 500px) {
+  .button2 {
+    margin-left: 12rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .flightb {
+    display: flex;
+    box-sizing: 2rem;
+    margin-top: 3rem;
+    align-items: left;
+    justify-content: left;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .inffo h1 {
+    margin-top: 2rem;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  .inffo p {
+    margin-top: 1rem;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .button2 {
+    margin-left: 7rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .button2 {
+    margin-left: 11rem;
+  }
+}
+.about {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.about h1 {
+  font-size: 30px;
+  color: orange;
+}
+
+.about p {
+  font-size: 17px;
+  text-align: center;
+  margin: 10rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 300px) {
+  .about p {
+    font-size: 13px;
+    text-align: center;
+    margin: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .about p {
+    font-size: 17px;
+    text-align: center;
+    margin: 10rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+.footer {
+  background-color: #FFD700;
+  margin-top: 3rem;
+}
+.footer .text h1 {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 30px;
+}
+.footer .text p {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 18px;
+}
+.footer .inform p {
+  margin-top: 2rem;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  margin-left: 10rem;
+}
+.footer .icon {
+  font-size: 25px;
+  margin-top: 3rem;
+  margin-left: 10rem;
+}
+.footer .company {
+  border-top: 10px solid orange;
+  margin-top: 3rem;
+}
+.footer .company p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 300px) {
+  .footer .inform p {
+    margin-top: 2rem;
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    margin-left: 3rem;
+  }
+  .footer .icon {
+    font-size: 25px;
+    margin-top: 2rem;
+    margin-left: 3rem;
+  }
+}
+@media screen and (min-width: 300px) {
+  .footer .inform p {
+    margin-top: 2rem;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    margin-left: 3rem;
+  }
+}
+.text {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.text p {
+  text-align: center;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  font-size: 15px;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 300px) {
+  .text h1 {
+    font-size: 25px;
+  }
+  .text p {
+    font-size: 13px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .text h1 {
+    font-size: 30px;
+  }
+  .text p {
+    font-size: 15px;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
+.desp {
+  display: flex;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.dessp {
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  transition: background-color 0.5s;
+  border-radius: 20px;
+}
+
+.dessp:hover {
+  background-color: #D3D3D3;
+  border-radius: 20px;
+}
+
+.dessp:active {
+  background-color: #FFD700;
+}
+
+.dessp h1 {
+  font-size: 30px;
+  margin-top: 1rem;
+}
+
+.icon {
+  font-size: 25px;
+}
+
+.dessp p {
+  font-size: 15px;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.dessp img {
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.button {
+  background-color: yellow;
+  color: black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  margin-top: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: rgb(152, 152, 53);
+}
+
+.button:active {
+  background-color: #3e8e41;
+}/*# sourceMappingURL=main.css.map */
